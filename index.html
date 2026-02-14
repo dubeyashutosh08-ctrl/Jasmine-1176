@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Velvet Ember Café | Taste the Trend</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --burgundy: #7a0f2c;
+  --charcoal: #111111;
+  --gold: #d4af37;
+  --light: #f5f5f5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--charcoal);
+  color: var(--light);
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  background: rgba(0,0,0,0.8);
+  padding: 15px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+header h1 {
+  color: var(--gold);
+}
+
+nav a {
+  color: var(--light);
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: var(--gold);
+}
+
+section {
+  padding: 100px 8%;
+}
+
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+  url('https://images.unsplash.com/photo-1550547660-d9450f859349') center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  color: var(--gold);
+}
+
+.hero p {
+  margin: 20px 0;
+  max-width: 600px;
+}
+
+.btn {
+  padding: 12px 30px;
+  background: var(--burgundy);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: 0.3s;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background: var(--gold);
+  color: black;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+  color: var(--gold);
+}
+
+.grid {
+  display: grid;
+  gap: 25px;
+}
+
+.menu-grid {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 15px;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(212,175,55,0.2);
+}
+
+.price {
+  color: var(--gold);
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.about, .contact {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+.testimonials {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.testimonial {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.gallery {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: none;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #000;
+  margin-top: 50px;
+}
+
+@media(max-width:768px){
+  .hero h2{
+    font-size: 2rem;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Velvet Ember Café</h1>
+  <nav>
+    <a href="#menu">Menu</a>
+    <a href="#about">About</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Taste the Trend</h2>
+  <p>Premium flavors. Gen-Z vibes. Luxury feel at student-friendly prices.</p>
+  <button class="btn">Order Now</button>
+</section>
+
+<section id="menu">
+  <h2 class="section-title">Featured Menu</h2>
+  <div class="grid menu-grid">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd">
+      <h3>Signature Burger</h3>
+      <p>Juicy grilled patty with ember sauce.</p>
+      <div class="price">₹249</div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add">
+      <h3>Loaded Fries</h3>
+      <p>Crispy fries topped with cheese & spice.</p>
+      <div class="price">₹179</div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1544025162-d76694265947">
+      <h3>Refreshing Mojito</h3>
+      <p>Minty fresh cool beverage.</p>
+      <div class="price">₹129</div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <h2 class="section-title">About Us</h2>
+  <div class="about">
+    <p>Velvet Ember Café blends premium culinary craftsmanship with modern Gen-Z culture. Our mission is to deliver bold flavors in a stylish environment that feels luxurious yet affordable for students and families alike.</p>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">Testimonials</h2>
+  <div class="testimonials">
+    <div class="testimonial">
+      <p>"Best burger spot in town. The vibe is unmatched!"</p>
+      <strong>- Aarav</strong>
+    </div>
+    <div class="testimonial">
+      <p>"Luxury feel without hurting my wallet."</p>
+      <strong>- Riya</strong>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <h2 class="section-title">Gallery</h2>
+  <div class="gallery">
+    <img src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d">
+    <img src="https://images.unsplash.com/photo-1551782450-17144efb9c50">
+    <img src="https://images.unsplash.com/photo-1543353071-087092ec3931">
+  </div>
+</section>
+
+<section id="contact">
+  <h2 class="section-title">Contact Us</h2>
+  <div class="contact">
+    <p>Visit us or drop a message below.</p>
+    <form>
+      <input type="text" placeholder="Your Name">
+      <input type="email" placeholder="Your Email">
+      <textarea rows="5" placeholder="Your Message"></textarea>
+      <button class="btn">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  © 2026 Velvet Ember Café | Designed with Passion
+</footer>
+
+</body>
+</html>
